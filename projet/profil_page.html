@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="profil.html" class="active">Mon Profil</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="amis.html">Amis</a></li>
+        </ul>
+        <div class="nav-user">
+            <span id="username">Utilisateur</span>
+            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <main class="content profile-content">
+            <div class="profile-header">
+                <h1>Mon Profil</h1>
+                <a href="modifier-profil.html" class="btn-edit">✏️ Modifier</a>
+            </div>
+            
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <div class="avatar-large">👤</div>
+                </div>
+                
+                <div class="profile-info">
+                    <h2 id="profile-name">Nom Prénom</h2>
+                    <p class="profile-type" id="profile-type">Type d'utilisateur</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Email :</label>
+                            <span id="profile-email">email@example.com</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <label>Téléphone :</label>
+                            <span id="profile-phone">+33 6 XX XX XX XX</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <label>Login :</label>
+                            <span id="profile-login">username</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <label>Date d'inscription :</label>
+                            <span id="profile-date">01/01/2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <h3 id="stat-messages">0</h3>
+                    <p>Messages publiés</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3 id="stat-friends">0</h3>
+                    <p>Amis</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3 id="stat-active">0</h3>
+                    <p>Jours actifs</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/profil.js"></script>
+</body>
+</html>
