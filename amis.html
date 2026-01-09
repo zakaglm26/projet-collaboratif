@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Amis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="profil.html">Mon Profil</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="amis.html" class="active">Amis</a></li>
+        </ul>
+        <div class="nav-user">
+            <span id="username">Utilisateur</span>
+            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <main class="content profile-content">
+            <div class="profile-header">
+                <h1>👥 Mes Amis</h1>
+                <a href="ajouter-ami.html" class="btn-edit">➕ Ajouter un ami</a>
+            </div>
+            
+            <div class="friends-grid">
+                <div class="friend-card">
+                    <div class="avatar">👤</div>
+                    <h3>Marie Martin</h3>
+                    <p class="friend-status">Étudiante</p>
+                    <div class="friend-actions">
+                        <button class="btn-small">💬 Message</button>
+                        <button class="btn-small btn-danger">❌ Retirer</button>
+                    </div>
+                </div>
+                
+                <div class="friend-card">
+                    <div class="avatar">👤</div>
+                    <h3>Paul Durant</h3>
+                    <p class="friend-status">Employé</p>
+                    <div class="friend-actions">
+                        <button class="btn-small">💬 Message</button>
+                        <button class="btn-small btn-danger">❌ Retirer</button>
+                    </div>
+                </div>
+                
+                <div class="friend-card">
+                    <div class="avatar">👤</div>
+                    <h3>Sophie Dubois</h3>
+                    <p class="friend-status">Étudiante</p>
+                    <div class="friend-actions">
+                        <button class="btn-small">💬 Message</button>
+                        <button class="btn-small btn-danger">❌ Retirer</button>
+                    </div>
+                </div>
+                
+                <div class="friend-card">
+                    <div class="avatar">👤</div>
+                    <h3>Jean Dupont</h3>
+                    <p class="friend-status">Employé</p>
+                    <div class="friend-actions">
+                        <button class="btn-small">💬 Message</button>
+                        <button class="btn-small btn-danger">❌ Retirer</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empty-state" style="display: none;">
+                <p style="text-align: center; color: #666; padding: 40px;">
+                    👥 Vous n'avez pas encore d'amis. Commencez à en ajouter !
+                </p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/amis.js"></script>
+</body>
+</html>

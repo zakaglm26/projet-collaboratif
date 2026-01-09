@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="accueil.html" class="active">Accueil</a></li>
+            <li><a href="profil.html">Mon Profil</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="amis.html">Amis</a></li>
+        </ul>
+        <div class="nav-user">
+            <span id="username">Utilisateur</span>
+            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <aside class="sidebar">
+            <div class="user-info">
+                <div class="avatar">👤</div>
+                <h3 id="user-fullname">Nom Prénom</h3>
+                <p id="user-status">Étudiant</p>
+            </div>
+            
+            <div class="quick-actions">
+                <h4>Actions rapides</h4>
+                <ul>
+                    <li><a href="modifier-profil.html">✏️ Modifier mon profil</a></li>
+                    <li><a href="ajouter-ami.html">➕ Ajouter un ami</a></li>
+                    <li><a href="publier-message.html">📝 Publier un message</a></li>
+                </ul>
+            </div>
+        </aside>
+        
+        <main class="content">
+            <section class="welcome">
+                <h1>Bienvenue sur votre espace</h1>
+                <p>Découvrez les dernières actualités et restez connecté avec vos amis</p>
+            </section>
+            
+            <section class="messages-feed">
+                <h2>Fil d'actualités</h2>
+                <div id="messagesList">
+                    <div class="message-card">
+                        <div class="message-header">
+                            <span class="message-author">Jean Dupont</span>
+                            <span class="message-date">Il y a 2 heures</span>
+                        </div>
+                        <div class="message-content">
+                            <p>Bienvenue sur notre nouvelle plateforme ! N'hésitez pas à partager vos idées.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/accueil.js"></script>
+</body>
+</html>

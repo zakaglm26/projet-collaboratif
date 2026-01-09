@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="profil.html">Mon Profil</a></li>
+            <li><a href="messages.html" class="active">Messages</a></li>
+            <li><a href="amis.html">Amis</a></li>
+        </ul>
+        <div class="nav-user">
+            <span id="username">Utilisateur</span>
+            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <main class="content profile-content">
+            <div class="profile-header">
+                <h1>💬 Mes Messages</h1>
+            </div>
+            
+            <div class="messages-section">
+                <div class="message-card">
+                    <div class="message-header">
+                        <span class="message-author">Marie Martin</span>
+                        <span class="message-date">Il y a 1 heure</span>
+                    </div>
+                    <div class="message-content">
+                        <p>Bonjour ! Comment vas-tu ? On se voit toujours demain pour le projet ?</p>
+                    </div>
+                    <div class="message-actions">
+                        <button class="btn-small btn-reply">Répondre</button>
+                        <button class="btn-small btn-delete">Supprimer</button>
+                    </div>
+                </div>
+                
+                <div class="message-card">
+                    <div class="message-header">
+                        <span class="message-author">Paul Durant</span>
+                        <span class="message-date">Il y a 3 heures</span>
+                    </div>
+                    <div class="message-content">
+                        <p>Excellent travail sur la présentation ! Merci pour ton aide.</p>
+                    </div>
+                    <div class="message-actions">
+                        <button class="btn-small btn-reply">Répondre</button>
+                        <button class="btn-small btn-delete">Supprimer</button>
+                    </div>
+                </div>
+                
+                <div class="message-card">
+                    <div class="message-header">
+                        <span class="message-author">Sophie Dubois</span>
+                        <span class="message-date">Hier</span>
+                    </div>
+                    <div class="message-content">
+                        <p>N'oublie pas la réunion de lundi à 10h !</p>
+                    </div>
+                    <div class="message-actions">
+                        <button class="btn-small btn-reply">Répondre</button>
+                        <button class="btn-small btn-delete">Supprimer</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empty-state" style="display: none;">
+                <p style="text-align: center; color: #666; padding: 40px;">
+                    📭 Aucun message pour le moment
+                </p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/messages.js"></script>
+</body>
+</html>
