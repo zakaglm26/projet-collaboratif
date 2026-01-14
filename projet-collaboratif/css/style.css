@@ -158,10 +158,28 @@ body {
     align-items: center;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.brand-circle {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background-image: url("../images/umpface.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 .nav-logo {
     font-size: 1.8em;
     font-weight: bold;
-    color: var(--primary-color);
+    color: rgb(12, 12, 197);
 }
 
 .nav-menu {
