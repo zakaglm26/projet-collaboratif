@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publier un message</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="accueil.html" class="active">Accueil</a></li>
+            <li><a href="profil.html">Mon Profil</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="amis.html">Amis</a></li>
+        </ul>
+        <div class="nav-user">
+            <span id="username">Utilisateur</span>
+            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <main class="content profile-content">
+            <div class="profile-header">
+                <h1>📝 Publier un message</h1>
+                <a href="accueil.html" class="btn-edit">← Retour à l'accueil</a>
+            </div>
+            
+            <div class="profile-card">
+                <form id="publishMessageForm">
+                    <div class="form-group">
+                        <label for="messageContent">Votre message *</label>
+                        <textarea 
+                            id="messageContent" 
+                            name="messageContent" 
+                            rows="6" 
+                            required
+                            placeholder="Qu'avez-vous à partager avec vos amis ?"
+                            style="width: 100%; padding: 12px 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; font-family: inherit; resize: vertical;"
+                        ></textarea>
+                        <p style="color: #666; font-size: 0.9em; margin-top: 8px;">
+                            <span id="charCount">0</span> / 500 caractères
+                        </p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="sharePublic" name="sharePublic">
+                            Partager publiquement (visible par tous)
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions" style="margin-top: 30px;">
+                        <button type="submit" class="btn-submit">📤 Publier</button>
+                        <button type="button" onclick="window.location.href='accueil.html'" style="background: #6c757d; margin-top: 10px;" class="btn-submit">Annuler</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="profile-card" style="margin-top: 30px;">
+                <h3>📋 Aperçu</h3>
+                <div class="message-card" style="margin-top: 15px;">
+                    <div class="message-header">
+                        <span class="message-author" id="previewAuthor">Votre nom</span>
+                        <span class="message-date">À l'instant</span>
+                    </div>
+                    <div class="message-content">
+                        <p id="previewContent">Votre message apparaîtra ici...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/publier-message.js"></script>
+</body>
+</html>

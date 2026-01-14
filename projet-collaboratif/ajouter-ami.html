@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un ami</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="profil.html">Mon Profil</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="amis.html" class="active">Amis</a></li>
+        </ul>
+        <div class="nav-user">
+            <span id="username">Utilisateur</span>
+            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <main class="content profile-content">
+            <div class="profile-header">
+                <h1>➕ Ajouter un ami</h1>
+                <a href="amis.html" class="btn-edit">← Retour à mes amis</a>
+            </div>
+            
+            <div class="profile-card">
+                <div class="search-section">
+                    <h3>🔍 Rechercher un utilisateur</h3>
+                    <div class="form-group" style="margin-top: 20px;">
+                        <input type="text" id="searchInput" placeholder="Entrez un nom, prénom ou login..." style="font-size: 1.1em;">
+                    </div>
+                    <button id="searchBtn" class="btn-submit" style="margin-top: 15px;">Rechercher</button>
+                </div>
+                
+                <div id="searchResults" style="margin-top: 30px;">
+                    <h3>Suggestions d'amis</h3>
+                    <div class="friends-grid" style="margin-top: 20px;">
+                        <div class="friend-card">
+                            <div class="avatar">👤</div>
+                            <h3>Alice Bernard</h3>
+                            <p class="friend-status">Étudiante</p>
+                            <button class="btn-small" style="background: #28a745; color: white;">✓ Ajouter</button>
+                        </div>
+                        
+                        <div class="friend-card">
+                            <div class="avatar">👤</div>
+                            <h3>Thomas Petit</h3>
+                            <p class="friend-status">Employé</p>
+                            <button class="btn-small" style="background: #28a745; color: white;">✓ Ajouter</button>
+                        </div>
+                        
+                        <div class="friend-card">
+                            <div class="avatar">👤</div>
+                            <h3>Emma Robert</h3>
+                            <p class="friend-status">Étudiante</p>
+                            <button class="btn-small" style="background: #28a745; color: white;">✓ Ajouter</button>
+                        </div>
+                        
+                        <div class="friend-card">
+                            <div class="avatar">👤</div>
+                            <h3>Lucas Moreau</h3>
+                            <p class="friend-status">Employé</p>
+                            <button class="btn-small" style="background: #28a745; color: white;">✓ Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/ajouter-ami.js"></script>
+</body>
+</html>
