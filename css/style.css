@@ -1,9 +1,9 @@
 /* ===== VARIABLES ET RÉINITIALISATIONS ===== */
 :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #357abd;
-    --success-color: #5cb85c;
-    --danger-color: #d9534f;
+    --primary-color: #2b2928;
+    --secondary-color: #bd4535;
+    --success-color: #a0b85c;
+    --danger-color: #a24fd9;
     --dark-color: #2c3e50;
     --light-color: #ecf0f1;
     --text-color: #333;
@@ -19,7 +19,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e90303 0%, #ff4b04 100%);
     min-height: 100vh;
     color: var(--text-color);
 }
