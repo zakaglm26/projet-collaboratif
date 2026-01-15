@@ -3,71 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier mon profil</title>
+    <title>Modifier Profil - UMP FACE</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .profile-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9em; }
+        .form-group input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; }
+        .form-group input:focus { border-color: rgb(233, 102, 8); outline: none; }
+        .btn-submit { background: rgb(233, 102, 8); color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 20px; transition: 0.3s; }
+        .btn-submit:hover { background: #333; }
+        .btn-back { display: inline-block; margin-bottom: 15px; text-decoration: none; color: #666; font-size: 0.9em; }
+        #msg { display: none; color: #28a745; margin-bottom: 10px; font-weight: bold; }
+    </style>
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-logo">LOGO</div>
+        <div class="brand">
+            <div class="brand-circle"></div>
+            <div class="nav-logo"><span style="color:rgb(233, 102, 8)">UMP </span>FACE</div>
+        </div>
         <ul class="nav-menu">
             <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="profil.html" class="active">Mon Profil</a></li>
+            <li><a href="profil.html" class="active">Profil</a></li>
             <li><a href="messages.html">Messages</a></li>
-            <li><a href="amis.html">Amis</a></li>
         </ul>
         <div class="nav-user">
-            <span id="username">Utilisateur</span>
-            <button onclick="logout()" class="btn-logout">Déconnexion</button>
+            <span>Zakaria</span>
+            <button onclick="location.href='login.html'" class="btn-logout">Quitter</button>
         </div>
     </nav>
     
     <div class="main-content">
-        <main class="content profile-content">
-            <div class="profile-header">
-                <h1>✏️ Modifier mon profil</h1>
-                <a href="profil.html" class="btn-edit">← Retour au profil</a>
-            </div>
-            
+        <main class="content">
+            <a href="profil.html" class="btn-back">← Retour</a>
             <div class="profile-card">
-                <form id="editProfileForm">
-                    <div class="form-grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="form-group">
-                            <label for="nom">Nom *</label>
-                            <input type="text" id="nom" name="nom" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="prenom">Prénom *</label>
-                            <input type="text" id="prenom" name="prenom" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="user_type">Type d'utilisateur *</label>
-                            <select id="user_type" name="user_type" required>
-                                <option value="student">Étudiant</option>
-                                <option value="employee">Employé</option>
-                            </select>
+                <h2>✏️ Modifier Profil</h2>
+                <div id="msg">✓ Enregistré !</div>
+                <form id="editForm">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Nom</label><input type="text" required></div>
+                        <div class="form-group"><label>Prénom</label><input type="text" required></div>
+                        <div class="form-group"><label>Email</label><input type="email" required></div>
+                        <div class="form-group"><label>Statut</label>
+                            <select><option>Étudiant</option><option>Employé</option></select>
                         </div>
                     </div>
-                    
-                    <div class="form-actions" style="margin-top: 30px;">
-                        <button type="submit" class="btn-submit">💾 Enregistrer les modifications</button>
-                    </div>
+                    <button type="submit" class="btn-submit">Sauvegarder</button>
                 </form>
             </div>
         </main>
     </div>
-    
-    <script src="js/modifier-profil.js"></script>
+
+    <script>
+        document.getElementById('editForm').onsubmit = (e) => {
+            e.preventDefault();
+            document.getElementById('msg').style.display = 'block';
+            setTimeout(() => document.getElementById('msg').style.display = 'none', 2000);
+        };
+    </script>
 </body>
 </html>
